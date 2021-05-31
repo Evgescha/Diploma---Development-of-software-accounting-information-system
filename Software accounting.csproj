@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B146D31-39A1-46E9-BFF0-C3EA76117B7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Software_accounting</RootNamespace>
+    <AssemblyName>Software accounting</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.2.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign">
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Computer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Computer.Designer.cs">
+      <DependentUpon>Computer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComputerGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComputerGuide.Designer.cs">
+      <DependentUpon>ComputerGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportByPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportByPC.Designer.cs">
+      <DependentUpon>ReportByPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportBySoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBySoftware.Designer.cs">
+      <DependentUpon>ReportBySoftware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoftareAccountingDataSet.cs">
+      <DependentUpon>SoftareAccountingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SoftareAccountingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoftareAccountingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Software.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Software.Designer.cs">
+      <DependentUpon>Software.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoftwareGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoftwareGuide.Designer.cs">
+      <DependentUpon>SoftwareGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Computer.resx">
+      <DependentUpon>Computer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComputerGuide.resx">
+      <DependentUpon>ComputerGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="ReportByPC.resx">
+      <DependentUpon>ReportByPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBySoftware.resx">
+      <DependentUpon>ReportBySoftware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Software.resx">
+      <DependentUpon>Software.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoftwareGuide.resx">
+      <DependentUpon>SoftwareGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SoftareAccountingDataSet.xsc">
+      <DependentUpon>SoftareAccountingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SoftareAccountingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SoftareAccountingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SoftareAccountingDataSet.xss">
+      <DependentUpon>SoftareAccountingDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\msvcr100.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="software.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SqlServerTypes\x64\" />
+    <Folder Include="SqlServerTypes\x86\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
